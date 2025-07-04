@@ -751,7 +751,7 @@ Type:
 object({
     allow_insecure_connections = optional(bool, false)
     client_certificate_mode    = optional(string)
-    exposed_port               = optional(number)
+    exposed_port               = optional(number, 0) # the default is required to avoid idempotency issues.
     external_enabled           = optional(bool, false)
     target_port                = optional(number)
     transport                  = optional(string, "Auto")
