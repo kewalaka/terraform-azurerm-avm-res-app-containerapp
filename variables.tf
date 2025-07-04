@@ -651,8 +651,8 @@ variable "identity_settings" {
 variable "ingress" {
   type = object({
     allow_insecure_connections = optional(bool, false)
-    client_certificate_mode    = optional(string, "Ignore")
-    exposed_port               = optional(number, 0)
+    client_certificate_mode    = optional(string)
+    exposed_port               = optional(number)
     external_enabled           = optional(bool, false)
     target_port                = optional(number)
     transport                  = optional(string, "Auto")
